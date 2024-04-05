@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>margin-trim: block の例</title>
+  <style>
+  .container {
+    border: 1px solid #666;
+    padding: 1em;
+    margin-trim: block;
+    box-sizing: border-box;
+    width: 650px;
+  }
+
+  h2 {
+    margin-block-start: 2em;
+    margin-block-end: 1em;
+  }
+
+  p, ul {
+    margin-block: 1em;
+  }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>はじめに</h2>
+  <p>CSSには文字組に関わるプロパティが多くありますが...</p>
+  <p>（略）</p>
+  <h2>text-wrapプロパティについて</h2>
+  <p>（略）</p>
+  <ul>
+    <li><a href="https://www.w3.org/TR/css-text-4/">CSS Text Module Level 4</a></li>
+    <li><a href="https://triple-underscore.github.io/css-text-ja.html">CSS Text Module Level 4 日本語訳</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
