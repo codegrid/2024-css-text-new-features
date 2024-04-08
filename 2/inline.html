@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>margin-trim: inline</title>
+  <style>
+  p {
+    width: 650px;
+  }
+  .inline-icon {
+    margin-inline: 0.5em;
+  }
+
+  .inline-link {
+    display: inline-flex;
+    margin-inline: 0.5em;
+  }
+
+  .inline-link.trim {
+    margin-trim: inline;
+  }
+  </style>
+</head>
+<body>
+
+<p>
+  CodeGridのファビコンは<img src="icon-codegrid.png" alt="CGと書かれたCodeGridのロゴ" class="inline-icon" width="16" height="16">です。また、外部リンクには<img src="icon-external-link.svg" alt="正方形と、その右上に飛び出すような矢印のアイコン" class="inline-icon" width="16" height="16">を用います。
+<p>
+<h2>margin-trimなし</h2>
+<p>
+  ウェブサイトは<a href="https://www.codegrid.net/" class="inline-link"><img src="icon-codegrid.png" alt="" class="inline-icon" width="16" height="16">CodeGrid - フロントエンドに関わる人々のガイド<img src="icon-external-link.svg" alt="正方形と、その右上に飛び出すような矢印のアイコン" class="inline-icon" width="16" height="16"></a>です。
+</p>
+<h2>margin-trim: inline</h2>
+<p>
+  ウェブサイトは<a href="https://www.codegrid.net/" class="inline-link trim"><img src="icon-codegrid.png" alt="" class="inline-icon" width="16" height="16">CodeGrid - フロントエンドに関わる人々のガイド<img src="icon-external-link.svg" alt="正方形と、その右上に飛び出すような矢印のアイコン" class="inline-icon" width="16" height="16"></a>です。
+</p>
+
+</body>
+</html>
