@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text-spacing-trim: space-first / trim-start</title>
+  <style>
+  body {
+    font-size: 16px;
+    font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 0.5em 1em;
+  }
+
+  dt {
+    font-weight: 600;
+    align-self: center;
+    white-space: nowrap;
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    width: 24em;
+  }
+
+  .space-first {
+    background-color: peachpuff;
+    text-spacing-trim: space-first
+  }
+
+  .trim-start {
+    background-color: #b4ffe5;
+    text-spacing-trim: trim-start;
+  }
+  </style>
+</head>
+<body>
+
+<dl>
+  <dt>space-first</dt>
+  <dd>
+    <p class="space-first">
+      「『春はあけぼの』清少納言の言葉だ」彼が呟いた。<br>
+      「そういえば、もうすぐ春だね」と私は返したが、「まだ早いかも」と彼は首をかしげた。<br>
+      　私は納得できず、「もうすぐだよ」と重ねた。
+    </p>
+  </dd>
+  <dt>trim-start 1</dt>
+  <dd>
+    <p class="trim-start">
+      「『春はあけぼの』清少納言の言葉だ」彼が呟いた。<br>
+      「そういえば、もうすぐ春だね」と私は返したが、「まだ早いかも」と彼は首をかしげた。<br>
+      　私は納得できず、「もうすぐだよ」と重ねた。
+    </p>
+  </dd>
+  <dt>trim-start 2</dt>
+  <dd>
+    <p class="trim-start" style="width: 23em;">
+      「『春はあけぼの』清少納言の言葉だ」彼が呟いた。<br>
+      「そういえば、もうすぐ春だね」と私は返したが、「まだ早いかも」と彼は首をかしげた。<br>
+      　私は納得できず、「もうすぐだよ」と重ねた。
+    </p>
+  </dd>
+</dl>
+
+
+</body>
+</html>
