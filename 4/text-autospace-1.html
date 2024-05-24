@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text-autospaceの見た目を確認</title>
+  <style>
+  body {
+    font-size: 16px;
+  }
+
+  .no-autospace {
+    text-autospace: no-autospace;
+  }
+
+  .normal {
+    text-autospace: normal;
+  }
+
+  .hardspace {
+    text-autospace: no-autospace;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding-block-start: 0.5em;
+  }
+
+  th {
+    padding-inline-end: 1em;
+    font: inherit;
+    text-align: start;
+  }
+  </style>
+</head>
+<body>
+
+<table>
+  <tbody>
+    <tr>
+      <th>no-autospace</th>
+      <td class="no-autospace">2024年5月16日発行のCodeGridの記事一覧はこちらです。</td>
+    </tr>
+    <tr>
+      <th>normal</th>
+      <td class="normal">2024年5月16日発行のCodeGridの記事一覧はこちらです。</td>
+    </tr>
+    <tr>
+      <th>半角スペース</th>
+      <td class="hardspace">2024 年 5 月 16 日発行の CodeGrid の記事一覧はこちらです。</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

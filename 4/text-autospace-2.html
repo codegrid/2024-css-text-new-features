@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text-autospaceの見た目を長文で確認</title>
+  <style>
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  p, ul {
+    margin-block: 1.6em;
+  }
+
+  code {
+    font-family: "Courier New", monospace;
+  }
+
+  .container {
+    width: 640px;
+  }
+
+  .stage {
+    border: 1px solid silver;
+    padding: 1em;
+    overflow: auto;
+    resize: both;
+  }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div style="text-align: end">text-autospace: <label><input type="checkbox" checked>有効</label></div>
+  <div class="stage" style="text-autospace: normal">
+    <h2>text-wrapプロパティについて</h2>
+    <p><code>text-wrap</code>プロパティは、その名のとおり、テキストの折り返しに関するプロパティです。</p>
+    <p>
+      これまでできなかった折り返し処理を実現できるようになり、「どうにかならないものか」と思っていた文字組に対しての解決策のひとつになります。</p>
+    <p><code>text-wrap</code>プロパティ自体はCSS Text Module Level 3の初期に存在していましたが、Level
+      3では最終的に廃止されました。現在はLevel 4の仕様に掲載されています。</p>
+    <ul>
+      <li><a href="https://www.w3.org/TR/css-text-4/">CSS Text Module Level 4</a></li>
+    </ul>
+    <p>そして昨年（2023年）からブラウザの実装が進んでおり、Google
+      ChromeなどのBlink系ブラウザ、Firefoxを代表とするGecko系ブラウザでは、一部機能が安定版に実装されています。</p>
+    <p>SafariのWebkitではプレビュー版のみとなっていますが、もうすぐ安定版に実装されるでしょう。</p>
+    <p><code>text-wrap</code>は<code>text-wrap-style</code>と<code>text-wrap-mode</code>という2つのプロパティの値を同時に指定できるのですが、そのうち<code>text-wrap-mode</code>プロパティと、その値である<code>wrap</code>と<code>nowrap</code>はSafari
+      17.4安定版に実装されました。</p>
+    <p>それでは、<code>text-wrap</code>プロパティの各値がどのようなものか順に見ていきましょう。</p>
+  </div>
+</div>
+
+<script>
+const checkbox = document.querySelector('input[type="checkbox"]');
+const stage = document.querySelector('.stage');
+
+checkbox.addEventListener('change', () => {
+  stage.style.textAutospace = checkbox.checked ? 'normal' : 'no-autospace';
+});
+</script>
+
+</body>
+</html>
